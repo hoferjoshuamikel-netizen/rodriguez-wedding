@@ -45,12 +45,10 @@ This static HTML/CSS/JavaScript site needs no database, custom login, npm depend
 
 1. In Vercel, open **Project Settings > Domains**.
 2. Add **rodriguez-wedding.com** and **www.rodriguez-wedding.com**. Serve the site on the main domain and explicitly redirect www to it.
-3. Open the current DNS provider's records page. DNS checked September 30, 2026 used ns35.domaincontrol.com and ns36.domaincontrol.com (GoDaddy). Save a screenshot of the current records.
+3. Open your domain provider's DNS records page. Save a screenshot of the current records.
 4. Copy the **exact records displayed by Vercel**. The main domain normally uses an A record named @ and www uses a CNAME. Use this project's displayed values.
 5. Update only the website's DNS records. Keep nameservers and Microsoft email records: MX, SPF/TXT, DKIM, DMARC, autodiscover, and other mail/verification entries. Resolve conflicts only for the website hostnames being changed.
 6. Wait for valid configuration in Vercel, then test HTTPS at both names and the www redirect.
-
-The initial DNS snapshot had two root A values, 15.197.148.33 and 3.33.130.190, and Microsoft MX rodriguezwedding-com02c.mail.protection.outlook.com. Recheck current records before editing; the snapshot is not a command to delete records blindly.
 
 Do not purchase or transfer the domain again. This setup uses Vercel Hobby within its free limits. Existing domain/email renewals remain separate.
 
